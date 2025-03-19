@@ -3,53 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List App</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            margin: 20px; 
-        }
-        .container { 
-            max-width: 400px; 
-            margin: auto; 
-        }
-        input { 
-            width: 70%; 
-            padding: 10px; 
-            border: 1px solid #ccc; 
-            border-radius: 5px; 
-        }
-        button { 
-            padding: 10px; 
-            border: none; 
-            background: #0077b5; 
-            color: white; 
-            border-radius: 5px; 
-            cursor: pointer; 
-        }
-        button:hover { 
-            background: #005582; 
-        }
-        ul { 
-            list-style: none; padding: 0; 
-        }
-        li { 
-            padding: 10px; 
-            background: #c7d31a;
-            color: #ccc; 
-            margin: 5px 0; 
-            display: flex; 
-            justify-content: space-between; 
-        }
-        .delete { 
-            background: red; 
-            color: rgb(231, 198, 198); 
-            border: none; 
-            padding: 5px 10px; 
-            cursor: pointer; 
-        }
-    </style>
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="to-doapp.css">
+    <script src="to-doapp.js"></script>
 </head>
 <body>
     <div class="container">
@@ -58,23 +14,6 @@
         <button onclick="addTask()">Add</button>
         <ul id="taskList"></ul>
     </div>
-    <script>
-        function addTask() {
-            let taskInput = document.getElementById("taskInput");
-            let taskValue = taskInput.value.trim();
-            if (taskValue === "") {
-                alert("Task cannot be empty!");
-                return;
-            }
-            let taskList = document.getElementById("taskList");
-            let li = document.createElement("li");
-            li.innerHTML = `${taskValue} <button class='delete' onclick='deleteTask(this)'>Delete</button>`;
-            taskList.appendChild(li);
-            taskInput.value = "";
-        }
-        function deleteTask(button) {
-            button.parentElement.remove();
-        }
-    </script>
+    
 </body>
 </html>

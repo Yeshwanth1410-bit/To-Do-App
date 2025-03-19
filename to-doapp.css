@@ -1,0 +1,44 @@
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    margin: 20px; 
+}
+.container { 
+    max-width: 400px; 
+    margin: auto; 
+}
+input { 
+    width: 70%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+button { 
+    padding: 10px; 
+    border: none; 
+    background: #0077b5; 
+    color: white; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+button:hover { 
+    background: #005582; 
+}
+ul { 
+    list-style: none; padding: 0; 
+}
+li { 
+    padding: 10px; 
+    background: #c7d31a;
+    color: black; 
+    margin: 5px 0; 
+    display: flex; 
+    justify-content: space-between; 
+}
+.delete { 
+    background: red; 
+    color: rgb(231, 198, 198); 
+    border: none; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+}
